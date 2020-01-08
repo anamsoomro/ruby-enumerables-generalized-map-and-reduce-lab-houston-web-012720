@@ -10,11 +10,12 @@ def map(array)
 end
 
 def reduce(array, starting_value=nil)
-  i=0
   if starting_value != nil
     sum = starting_value
+    i = 0
   else
-    sum = 0
+    sum = array[0]
+    i = 1
   end
   while i < array.length
     sum = yield(sum, array[i])
